@@ -1,7 +1,8 @@
 /*
  Essentials.js is simple js code which contain all basic and essential javascript
  functions for the website development. 
- AUTHOR : Saroj Dahal 
+ AUTHOR : Saroj Dahal / @originalsaroj
+ VERSION: 1.0.0
 */
 
 //Function for cookies
