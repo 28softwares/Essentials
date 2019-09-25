@@ -5,12 +5,19 @@
  VERSION: 1.0.0
 */
 
-/*Make Vertical Line */
+/*Make Image undragable*/
 
-.vl {
-  border-left: 6px solid #ccc;
-  height: 500px;
-}
+.unselectable 
+
+    {
+            user-drag: none; 
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+    }
+
 
 /*Styles for default scrollbar*/
 

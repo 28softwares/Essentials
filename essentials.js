@@ -23,4 +23,10 @@ function eraseCookie(key) {
     setCookie(key, keyValue, '-1');
 }
 
+function isOnline(){
+
+	return (window.navigator.onLine)?true:false;
+}
+
+
 
