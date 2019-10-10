@@ -23,6 +23,8 @@ function eraseCookie(key) {
     setCookie(key, keyValue, '-1');
 }
 
+//Checks Internet Connection
+
 function isOnline(){
 
 	return (window.navigator.onLine)?true:false;
