@@ -23,12 +23,14 @@ function eraseCookie(key) {
     setCookie(key, keyValue, '-1');
 }
 
-//Checks Internet Connection
+//Network Functions
 
-function isOnline(){
+function isOnline(){ //Checks Internet Connection
 
-	return (window.navigator.onLine)?true:false;
+    return (window.navigator.onLine)?true:false;
 }
+
+
 
 
 
