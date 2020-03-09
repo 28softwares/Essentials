@@ -1,4 +1,4 @@
-/*
+	/*
  Essentials.js is simple js code which contain all basic and essential javascript
  functions for the website development. 
  AUTHOR : Saroj Dahal / @originalsaroj
@@ -30,6 +30,22 @@ function isOnline(){ //Checks Internet Connection
     return (window.navigator.onLine)?true:false;
 }
 
+function lookupInfo(){ //Gets Vistors information ( like country,network,long-lat
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET","http://ip-api.com/json",true);
+
+    xhttp.onload = function(){
+    if(this.readyState ==4 && this.status == 200){
+        
+        var data = JSON.parse(xhttp.responseText);
+        // console.log(data["country"]); // Gets Country Name
+
+        }
+    };
+
+    xhttp.send();
+} 
 
 
 
