@@ -1,9 +1,21 @@
-	/*
+/*
  Essentials.js is simple js code which contain all basic and essential javascript
  functions for the website development. 
  AUTHOR : Saroj Dahal / @originalsaroj
  VERSION: 1.0.0
 */
+
+function copyit(theField) {
+
+var selectedText = document.selection;
+if (selectedText.type == 'Text') {
+	var newRange = selectedText.createRange();
+	theField.focus();
+	theField.value = newRange.text;
+} 
+else alert('select a text in the page and then press this button');
+	
+}
 
 //Function for cookies
 
