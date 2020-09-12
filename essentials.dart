@@ -5,14 +5,12 @@
  VERSION: 1.0.0
 */
 
-
 import 'package:flutter/material.dart';
 
 //while adding content, call this fxn
 addPadding() {
   return Padding(padding: EdgeInsets.only(top: 12.0));
 }
-
 
 //Pass the title, and message to showAlertDialog and alert Box is yours
 
@@ -41,7 +39,6 @@ showAlertDialog(BuildContext context, String title, String message) {
   );
 }
 
-
 //pass list of string in order to validate whether the given field is empty or not
 // useful else than checking field one by one.
 validateFields(List<String> fields) {
@@ -51,7 +48,6 @@ validateFields(List<String> fields) {
 
   return true;
 }
-
 
 String removeAllHtmlTags(String htmlText) {
   RegExp exp = RegExp(r"<[^>]*>", multiLine: true, caseSensitive: true);
