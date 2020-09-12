@@ -5,40 +5,39 @@
  VERSION: 1.0.0
 */
 
-/*Make Image undragable*/
+/*Make Image undraggable*/
 
-.unselectable 
-
-{
-    user-drag: none; 
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+.unselectable {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-/*Styles for default scrollbar*/
+/*creating custom Scrollbar*/
 
-	/* width */
-	::-webkit-scrollbar {
-	  width: 10px;
-	}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-	/* Track */
-	::-webkit-scrollbar-track {
-	  box-shadow: inset 0 0 5px grey; 
-	  border-radius: 10px;
-	}
-	 
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-	  background: #ccc; 
-	  border-radius: 10px;
-	}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
 
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-	  background: #b30000; 
-	}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+/* End of Creating Custom Scrollbar*/
