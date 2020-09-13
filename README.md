@@ -5,4 +5,4 @@ There is few functionalities in this repo. Many updates are on the way.
 
 ---
 
-Repo Managed by : Saroj Dahal :heart:
+Repo Managed by : Saroj Dahal and Nigam Bhattarai :heart:
