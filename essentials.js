@@ -76,3 +76,55 @@ function addBookmark(url, siteName) {
 function redirectTo(url, seconds) {
   setTimeout(`window.location.href ='${url}'`, seconds * 1000);
 }
+
+
+//Playing With URL (Might be needed sometimes when URL needs to be used and played with using javascript)
+
+//Remove a particular parameter from a URL
+
+function removeURLParameter(url, parameter) {
+  url = url.split('#')[0];
+  var urlparts= url.split('?');
+  if (urlparts.length>=2) {
+
+      var prefix= encodeURIComponent(parameter)+'=';
+      var pars= urlparts[1].split(/[&;]/g);
+      for (var i= pars.length; i-- > 0;) {
+          if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+              pars.splice(i, 1);
+          }
+      }
+      url= urlparts[0]+'?'+pars.join('&');
+      return url;
+  } else {
+      return url;
+  }
+}
+
+//Add a particular or a list of parameters to a URL
+
+function addParams( url, data ) {
+    if ( ! $.isEmptyObject(data) )
+    {
+        url += ( url.indexOf('?') >= 0 ? '&' : '?' ) + $.param(data);
+    }
+
+    return url;
+}
+
+//Get a value of parameter from URL
+
+function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+
+      if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+      }
+  }
+}
