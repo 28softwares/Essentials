@@ -1,6 +1,6 @@
 /**
  * Generates random number.
- *  * @returns {number} - random and unique number
+ *  * @returns {number} 
  */
 function generateRandomNumber(): Number {
   const date: Date = new Date();
@@ -16,4 +16,3 @@ function generateRandomNumber(): Number {
   );
 }
 
-generateRandomNumber();
