@@ -2,7 +2,7 @@
 
 <?php
 
-
+//recursively remove directories
 function recursive_rmdir($dir) { 
     if (is_dir($dir)) { 
       $objects = scandir($dir); 
@@ -16,3 +16,9 @@ function recursive_rmdir($dir) {
       rmdir($dir); 
     } 
   }
+
+  //filter string from sql injections
+  function filter_string($input)
+	{
+		return htmlspecialchars(mysqli_real_escape_string(trim($input)));
+	}
