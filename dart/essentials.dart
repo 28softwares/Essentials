@@ -1,11 +1,12 @@
 /*
  Essentials.dart is collection of simple and most useful dart functions  which contain all basic and essential dart
  functions for the Flutter app development
- AUTHOR : Saroj Dahal / @originalsaroj
+ AUTHOR : Saroj Dahal / @sarojdahal1213
  VERSION: 1.0.0
 */
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 //while adding content, call this fxn
 addPadding() {
@@ -53,4 +54,36 @@ String removeAllHtmlTags(String htmlText) {
   RegExp exp = RegExp(r"<[^>]*>", multiLine: true, caseSensitive: true);
 
   return htmlText.replaceAll(exp, '');
+}
+
+showToast(String message) {
+  return Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      backgroundColor: PRIMARY_COLOR,
+      textColor: Colors.white,
+      fontSize: 16.0);
+}
+
+//convert R,G,B Color to Flutter Material Color
+
+//usuage :
+// MaterialColor PRIMARY_COLOR = MaterialColor(0xFF997D90, convertToMaterialColor(153, 125, 144));
+convertToMaterialColor(int r, int g, int b) {
+  Map<int, Color> color = {
+    50: Color.fromRGBO(r, g, b, .1),
+    100: Color.fromRGBO(r, g, b, .2),
+    200: Color.fromRGBO(r, g, b, .3),
+    300: Color.fromRGBO(r, g, b, .4),
+    400: Color.fromRGBO(r, g, b, .5),
+    500: Color.fromRGBO(r, g, b, .6),
+    600: Color.fromRGBO(r, g, b, .7),
+    700: Color.fromRGBO(r, g, b, .8),
+    800: Color.fromRGBO(r, g, b, .9),
+    900: Color.fromRGBO(r, g, b, 1),
+  };
+
+  return color;
 }
