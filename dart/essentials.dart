@@ -1,7 +1,7 @@
 /*
  Essentials.dart is collection of simple and most useful dart functions  which contain all basic and essential dart
  functions for the Flutter app development
- AUTHOR : Saroj Dahal / @sarojdahal1213
+ AUTHOR : Saroj Dahal / isarojdahal
  VERSION: 1.0.0
 */
 
@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 //while adding content, call this fxn
-addPadding() {
-  return Padding(padding: EdgeInsets.only(top: 12.0));
+addPadding(double topValue) {
+  return Padding(padding: EdgeInsets.only(top: topValue));
 }
 
 //Pass the title, and message to showAlertDialog and alert Box is yours
