@@ -1,11 +1,7 @@
-
-
-"""
-Sample Parameterized Decorator
-"""
-
 def param_decor(n):
-
+    """
+    Sample Parameterized Decorator
+    """
     def wrapper(func):
 
         def inner_function():
