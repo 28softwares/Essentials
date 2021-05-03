@@ -8,6 +8,13 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+class AppColor {
+  static MaterialColor PRIMARY_COLOR = COLOR;
+  static const SECONDARY_COLOR = COLOR;
+  static Color HEADING_TEXT_COLOR = COLOR;
+  static Color NORMAL_TEXT_COLOR = COLOR;
+}
+
 //while adding content, call this fxn
 addPadding(double topValue) {
   return Padding(padding: EdgeInsets.only(top: topValue));
