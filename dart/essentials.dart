@@ -87,3 +87,10 @@ convertToMaterialColor(int r, int g, int b) {
 
   return color;
 }
+
+wrapWithGesture(BuildContext context, childParam, route) {
+  return GestureDetector(
+      child: childParam,
+      onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => route)));
+}
