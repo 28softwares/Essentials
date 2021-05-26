@@ -13,7 +13,7 @@ function convertDateToSQLFormat(paramDate) {
   return new Date().toISOString().slice(0, 19).replace("T", " ");
 }
 
-function copyit(theField) {
+function copyIt(theField) {
   var selectedText = document.selection;
   if (selectedText.type == "Text") {
     var newRange = selectedText.createRange();
