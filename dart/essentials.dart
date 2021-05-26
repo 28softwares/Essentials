@@ -1,7 +1,7 @@
 /*
  Essentials.dart is collection of simple and most useful dart functions  which contain all basic and essential dart
  functions for the Flutter app development
- AUTHOR : Saroj Dahal / isarojdahal
+ AUTHOR : Saroj Dahal / @isarojdahal
  VERSION: 1.0.0
 */
 
