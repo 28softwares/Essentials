@@ -15,6 +15,23 @@ class AppColor {
   static Color NORMAL_TEXT_COLOR = COLOR;
 }
 
+showSnackBar(BuildContext context, String messageText, {int duration}) {
+  if (duration == null) duration = 3; //default duration is of 3 seconds.
+  final snackBar = SnackBar(
+    content: Text(messageText),
+    duration: Duration(seconds: duration),
+  );
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+}
+
+//minimzie the gesture and route code with wrapWithGesture method
+wrapWithGesture(BuildContext context, childParam, route) {
+  return GestureDetector(
+      child: childParam,
+      onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => route)));
+}
+
 //while adding content, call this fxn
 addPadding(double topValue) {
   return Padding(padding: EdgeInsets.only(top: topValue));
@@ -93,11 +110,4 @@ convertToMaterialColor(int r, int g, int b) {
   };
 
   return color;
-}
-
-wrapWithGesture(BuildContext context, childParam, route) {
-  return GestureDetector(
-      child: childParam,
-      onTap: () => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => route)));
 }
