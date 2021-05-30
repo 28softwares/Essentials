@@ -135,3 +135,11 @@ function getUrlParameter(sParam) {
     }
   }
 }
+
+/**
+ * function to check the object is empty
+ * @param {object} obj - Required object to check
+ */
+function isObjectEmpty(obj = {}) {
+  return Object.keys(obj).length === 0
+}
