@@ -143,3 +143,27 @@ function getUrlParameter(sParam) {
 function isObjectEmpty(obj = {}) {
   return Object.keys(obj).length === 0
 }
+
+// Author:Pramesh Karki(@PrameshKarki)
+// www.karkipramesh.com.np 
+
+// Method to automatic scroll to top
+const goToTop=()=>window.scrollTo(0,0);
+
+// Method to reverse string
+const reverseString=str=>str.split('').reverse().join('');
+
+// Method to get Selected Text
+const getSelectedString=()=>window.getSelection().toString();
+
+// Method to detect dark mode
+const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+
+// Method to remove duplicate from array
+const removeDuplicates = (arr) => [...new Set(arr)];
+
+// Method to find difference between two dates
+const diffBetweenTwoDates=(date1, date2) => Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000);
+
+// Method to copy to the clipboard
+const copyToClipboard = (text) => navigator.clipboard.writeText(text);
