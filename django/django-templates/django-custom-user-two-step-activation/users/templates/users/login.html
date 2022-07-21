@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<form action="" method="POST" class="form auth__form">
+    {% csrf_token %}
+  <!-- Input:Email -->
+  <div class="mb-3 col-6">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+  </div>
+
+  <!-- Input:Password -->
+  <div class="mb-3 col-6">
+    <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password.">
+  </div>
+  <div class="auth__actions">
+    <input class="btn btn-primary" type="submit" value="Log In" />
+    <div><a href="{% url 'reset_password' %}">Forget Password?</a></div>
+  </div>
+  <div>
+    <p>Don't have an account?</p>
+    <a href="{% url 'register' %}">Sign Up</a>
+  </div>
+</form>
+
+
+{% endblock content %}

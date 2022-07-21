@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+
+
+<!-- Main Section -->
+<main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+            <h3>Enter new password</h3>
+
+            <p>Please enter your new password twice so we can verify you typed it in correctly.</p>
+
+            <br>
+
+            <form class="form" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

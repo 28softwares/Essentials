@@ -1,0 +1,1 @@
+Activate your account! You have {{expiration_days}} days left!

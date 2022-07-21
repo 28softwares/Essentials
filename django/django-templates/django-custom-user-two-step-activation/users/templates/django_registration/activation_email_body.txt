@@ -1,0 +1,9 @@
+Hi,
+
+You registered for an account, but you need to activate before using it withing {{expiration_days}} days.
+
+To do that, Please visit the page:
+
+{{scheme}}://{{request.get_host}}{%url 'django_registration_activate' activation_key%}
+
+Thanks!
