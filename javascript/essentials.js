@@ -167,3 +167,37 @@ const diffBetweenTwoDates=(date1, date2) => Math.ceil(Math.abs(date1.getTime() -
 
 // Method to copy to the clipboard
 const copyToClipboard = (text) => navigator.clipboard.writeText(text);
+
+// Author:Mishan Khatri(@Mishankhatri)
+// www.mishankhatri.com.np 
+
+/**
+ * Zips any number of indexable iterables arrays/string.
+ * It will always zip() the smallest iterable until it is exhausted.
+ * @param  {...Array<any>} arrays 
+ * @param  {...String<any>} strings
+ * @returns { Array }
+ * usecase:
+ * zip('abc','efg') --> [['a','e'],['b','f'],['c','g']]
+ * zip([1,2,3,4],[5,6,7,8],['a','b','c']) --> [[1,5,'a'],[2,6,'b'],[3,7,'c']]
+ */
+function zip(...args){
+  let argsLen = args.length
+  if (argsLen < 2 && args !== null){
+      console.error(`Arguments Error:zip() takes at least two arguments of indexable iterables,given ${argsLen}.`)
+      return
+  }
+  let zippedArr = []
+  let minLen = args[0].length
+  args.forEach((e)=>{
+      minLen = Math.min(minLen,e.length)
+  })
+  for (let i = 0; i < minLen ; i++){
+      let temp=[];
+      for ( j = 0 ; j < argsLen;j++){
+          temp.push(args[j][i])
+      }
+      zippedArr.push(temp)
+  }
+  return zippedArr
+}
