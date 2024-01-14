@@ -8,7 +8,7 @@ This repo contains collection of small-small functions and components which we n
 
 #### Rules For PR !!
 
-  
+  ...............................
 
 :star2: Make sure the added functions (or components) are also listed in readme.md file of that programming language directory.
   
@@ -19,3 +19,5 @@ This repo contains collection of small-small functions and components which we n
   
 
 ***Thankyou for being part of this project***
+
+*********Happy Coding*********
